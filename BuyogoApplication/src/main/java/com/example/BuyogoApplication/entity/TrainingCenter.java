@@ -19,7 +19,7 @@ import java.util.List;
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "CenterName is required")
+    @NotNull(message = "CenterName shouldn't be null")
     @Size(max = 40, message = "CenterName must be less than 40 characters")
     private String centerName;
 
@@ -34,7 +34,7 @@ import java.util.List;
     @NotNull(message = "ContactPhone is required")
     @Pattern(regexp = "\\d{10,}", message = "Invalid ContactPhone format")
     private String contactPhone;
-
+     @NotNull(message = "email should be present")
     @Email(message = "Invalid ContactEmail format")
     private String contactEmail;
 

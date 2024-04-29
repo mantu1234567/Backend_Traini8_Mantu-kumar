@@ -2,6 +2,7 @@ package com.example.BuyogoApplication.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
   @AllArgsConstructor
@@ -15,16 +16,16 @@ import lombok.*;
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @NotBlank(message = "Detailed Address is required")
+    @NotNull(message = "Detailed Address is required")
     private String detailedAddress;
 
-    @NotBlank(message = "City is required")
+    @NotNull(message = "City is required")
     private String city;
 
-    @NotBlank(message = "State is required")
+    @NotNull(message = "State is required")
     private String state;
 
-    @NotBlank(message = "Pincode is required")
+    @NotNull(message = "Pincode is required")
     private String pincode;
 
 }
